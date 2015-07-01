@@ -1,0 +1,36 @@
+// Button
+//----------------------------
+
+@import 'functions';
+@import 'animate';
+
+.btn{
+    display:inline-block;
+    color:#fff;
+    background:#8D614D;
+    height:32.5px;
+    line-height:32.5px;
+    padding:0px 15px;
+    text-align:center;
+    cursor:pointer;
+    font-weight:bold;
+    border:none;
+    @include border-radius(5px);
+    &:hover{
+        text-decoration:none;
+        border:none;
+    }
+    &:focus{
+        @include tab-focus();
+    }
+    &:visited{
+        color:#fff;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        background-color:rgba(141,97,77,.1);
+        cursor:not-allowed;
+    }
+}
+

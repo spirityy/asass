@@ -1,0 +1,28 @@
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #8D614D;
+  height: 32.5px;
+  line-height: 32.5px;
+  padding: 0px 15px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+  .btn:hover {
+    text-decoration: none;
+    border: none; }
+  .btn:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+  .btn:visited {
+    color: #fff; }
+  .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    background-color: rgba(141, 97, 77, 0.1);
+    cursor: not-allowed; }
