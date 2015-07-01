@@ -25,6 +25,16 @@
 }
 
 
+// v middle 
+@mixin v-center() {
+  &:after {
+      display:inline-block;
+      height:100%;
+      vertical-align:middle;
+      content: "";
+  }
+}
+
 // Center-align a block level element
 @mixin center-block() {
   display: block;
