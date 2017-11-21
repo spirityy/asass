@@ -8,7 +8,6 @@ $input-padding-v:5px;
 $input-border-color:#ddd;
 $form-line-margin:30px;
 
-
 $input-line-height:1.428571429 !default; // 20/14
 
 fieldset {
@@ -27,7 +26,6 @@ legend {
 
 label {
   display: inline-block;
-  font-weight: bold;
 }
 
 // Normalize form controls
@@ -48,13 +46,6 @@ select[size] {
   height: auto;
 }
 
-// Focus for select, file, radio, and checkbox
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-  @include tab-focus();
-}
-
 // Fix for Chrome number input
 // Setting certain font-sizes causes the `I` bar to appear on hover of the bottom increment button.
 // See https://github.com/twbs/bootstrap/issues/8350 for more.
@@ -67,6 +58,8 @@ input[type="number"] {
 
 input[type="text"],input[type="password"],textarea{
     @include placeholder();
+    @include border-radius(5px);
+    border:1px solid #c7c7c7;
 }
 
 .form .inp{
@@ -109,18 +102,18 @@ input[type=checkbox]{
 textarea{
     resize:none;
     height:auto;
+    vertical-align: top;
 }
-.radio-img{
-    display:inline-block;
-    margin-top:7px;
-    width:25px;
-    height:25px;
-    &.checking{
-        background:url(../img/check_radio.png);
-        background-size:25px 25px;
-    }
-    &.uncheck{
-        background:url(../img/uncheck_radio.png);
-        background-size:25px 25px;
-    }
+i.must{
+  margin-right: 6px;
+  color: #B51823;
+  font-style: normal;
+  vertical-align: middle;
+}
+.row{
+  margin-bottom: 16px;
+  &.action{
+    margin-top: 30px;
+    padding-left: 138px;
+  }
 }

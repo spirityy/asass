@@ -1,0 +1,239 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+@import 'functions';
+
+// Floats
+// -------------------------
+
+.clearfix{
+  @include clearfix();
+}
+.fr{
+  float: right !important;
+}
+.fl{
+  float: left !important;
+}
+
+//text align
+.t-r{
+    text-align:right;
+}
+.t-c{
+    text-align:center;
+}
+.t-l{
+    text-align:left;
+}
+.mt10{
+    margin-top:10px;
+}
+.mb10{
+    margin-bottom:10px;
+}
+.mr10{
+    margin-right:10px;
+}
+.ml10{
+    margin-left:10px;
+}
+
+
+// Toggling content
+// -------------------------
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+input.fileinput{
+    visibility:hidden;position:absolute;top:-50;left:-50;
+}
+
+// For Affix plugin
+// -------------------------
+
+.posfix {
+  position: fixed;
+}
+.red-tip{
+    color:$red-error !important;
+}
+.loading-icon{
+    width:24px;
+    height:24px;
+}
+.site-error{
+  padding-top: 100px;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+//animate class
+@-webkit-keyframes zoomIn {
+   from {
+     opacity: 0;
+     -webkit-transform: scale3d(.3, .3, .3);
+     transform: scale3d(.3, .3, .3);
+   }
+   100% {
+     opacity: 1;
+   }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+}
+@keyframes zoomOut {
+  from {
+   opacity: 1;
+ }
+ 100% {
+   opacity: 0;
+   -webkit-transform: scale3d(.3, .3, .3);
+   transform: scale3d(.3, .3, .3);
+ }
+}
+@-webkit-keyframes moveDownIn {
+  0% {
+    -webkit-transform: translate3d(0,-100%,0);
+            transform: translate3d(0,-100%,0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform:none;
+            transform:none;
+    opacity: 1;
+  }
+}
+@keyframes moveDownIn {
+  0% {
+    -webkit-transform: translate3d(0,-100%,0);
+            transform: translate3d(0,-100%,0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moveUpOut {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(0,-100%,0);
+            transform: translate3d(0,-100%,0);
+    opacity: 0;
+  }
+}
+@keyframes moveUpOut {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(0,-100%,0);
+            transform: translate3d(0,-100%,0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.loading-icon {
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  -webkit-animation: loading 1s infinite linear;
+  animation: loading 1s infinite linear;
+  margin: 0 !important;
+}
+.zoom-in{
+	-webkit-animation-duration: .2s;
+  animation-duration: .2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: zoomIn;
+	animation-name: zoomIn;
+  -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+          animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+}
+.zoom-out{
+	-webkit-animation-duration: .2s;
+  animation-duration: .2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: zoomOut;
+	animation-name: zoomOut;
+  -webkit-animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+          animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+}
+.move-in{
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: moveDownIn;
+  animation-name: moveDownIn;
+  -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+  animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+}
+.move-out{
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: moveUpOut;
+          animation-name: moveUpOut;
+  -webkit-animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+}

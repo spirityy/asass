@@ -16,16 +16,22 @@
   }
 }
 
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
 @mixin nouserselect() {
-   -moz-user-select: none; 
-   -webkit-user-select: none; 
-   -ms-user-select: none;   
-   -khtml-user-select: none; 
+   -moz-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   -khtml-user-select: none;
    user-select: none;
 }
 
 
-// v middle 
+// v middle
 @mixin v-center() {
   &:after {
       display:inline-block;
@@ -78,15 +84,6 @@
 //for ie
 @mixin reset-filter() {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
-
-// Webkit-style focus
-@mixin tab-focus() {
-  // Default
-  outline: thin dotted #333;
-  // Webkit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
 }
 
 @mixin linear-gradient($colorfrom,$colorto){

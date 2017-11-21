@@ -1,0 +1,67 @@
+@import "functions.scss";
+
+$pager-c:#6D6D6D;
+$pager-h:28px;
+$pager-m:8px;
+
+.pager{
+    width: 1200px;
+    margin:0 auto 76px;
+    text-align: center;
+    @include clearfix();
+    ul > li{
+        display: inline-block;
+        margin-right:$pager-m;
+        height:$pager-h;
+        line-height:$pager-h;
+        text-align:center;
+        > a {
+            @include border-radius(4px);
+            display:inline-block;
+            padding: 0 10px;
+            border: 1px solid #D2D2D2;
+            height:$pager-h;
+            line-height:$pager-h;
+            color:$pager-c;
+            i,span{
+              vertical-align: baseline;
+            }
+            &.prev,&.next{
+              i{
+                color: #B7141E;
+                margin:0;
+              }
+            }
+            &.cur,&:hover{
+              border: 1px solid #B7141E;
+              background-color: #B7141E;
+              color: #fff;
+              i{
+                color: #fff;
+              }
+            }
+            &.disable{
+              color: #4d4d4d;
+            }
+        }
+    }
+}
+//phone
+@media only screen and (max-width: 767px) {
+  .pager{
+    margin:0 auto 26px;
+    ul li{
+      margin: 0;
+    }
+    .nums{
+      display: none;
+    }
+    width: 100%;
+  }
+}
+//pad
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .pager{
+    width: 100%;
+  }
+}

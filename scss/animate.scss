@@ -43,3 +43,7 @@
   -webkit-transform: translate3d($x, $y, $z);
           transform: translate3d($x, $y, $z);
 }
+@mixin animation($transition...) {
+  -webkit-animation: $transition;
+          animation: $transition;
+}

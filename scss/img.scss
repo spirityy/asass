@@ -1,0 +1,5 @@
+@import 'functions';
+
+.user-avatar{
+  @include border-radius(5px);
+}
